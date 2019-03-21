@@ -82,24 +82,40 @@ To run the program, the html file can be clicked on, which will render the html 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
 `console.log('hello in console');`
 `alert("hello");`
+alerts are used to show text to the viewer of a webpage as a pop-up. console.log on the other hand is for developers that only prints out text in the console.
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
 To get rid of the pop-up box, the following code needs to be commented out: `alert("hello");`
 To create the date and time text box, the following code has to be added: `alert(new Date());`
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
+To replace my own name, I could tell JavaScript to get the HTML tag of that text on the top and assign the text inside the tag to my name: `document.querySelector('h1').innerHTML = "Zinnia"`
 
 * **What does the word `document` represent in this code? Explain briefly.**
+the word `document` represents the entire HTML document that is displayed on the browser.
 
 * **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
+The count of all the list items (html text with `<li>` tags) is being assigned to `<span id = "items">`. This is what is responsible for the number `9` in the text `The number of list items for this page: 9`
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+The color of the background would be white (the default).
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+The gray boxes are actually the extra space (background) around the text with the paragraph `<p>` tags that is assigned to a gray color. This background is given a border that is given a white color. All of this is done using CSS. The following will change the background color:
+```<style>
+p{
+	background-color: PowderBlue;
+}
+</style>
+```
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+I saw there is a function called `copyFunction` that seems to create some text. I also noticed the `<li>` text `University of Michigan` has this copy function assigned to it when it is `oncopy` (copied). Looking at this code, I made the following edits:
+```js
+<li oncopy="copyFunction()">McGill University</li>  document.querySelector('#cheer').innerHTML += "O Canada"
+```
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -113,11 +129,10 @@ function handleClick(){
 ```js
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
-
+The `handleClick` function is invoked when the `Wow` button is clicked. The function causes the alert text box to appear.
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
-
 
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
