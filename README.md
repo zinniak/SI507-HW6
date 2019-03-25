@@ -56,10 +56,8 @@ Below are a bunch of questions and indications of things to do. For each indicat
 	* Slightly more than half the 1000 points will come from answering the questions. The rest will come from your edits to the code.
 
 ### Names of people you have worked with on this assignment
-* List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
-* Like this:
 * **Zinnia Khan (zinniak)**
-*
+
 
 ## Questions & code instructions
 
@@ -104,7 +102,8 @@ The color of the background would be white (the default).
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 The gray boxes are actually the extra space (background) around the text with the paragraph `<p>` tags that is assigned to a gray color. This background is given a border that is given a white color. All of this is done using CSS. The following will change the background color:
-```<style>
+```js
+<style>
 p{
 	background-color: PowderBlue;
 }
@@ -140,12 +139,16 @@ The `handleClick` function is invoked when the `Wow` button is clicked. The func
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
+The response is caused by conditional statements that evaluate if the text entered in the input field is valid. If the text is evaluated as valid, the conditional statement uses JQuery to apply the `.error` style that is assigned the color red to be applied to the validation text that appears after an input is submitted. If the input text is invalid, the conditional statement applies the `.good` style to the validation instead, which assigns a blue color.
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+The variable is a regular expression to make sure that the text entered in the text box only contains letters (either upper or lower case).
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
+In JavaScript, the conditional statements that we want to evaluate are enclosed in parenthesis, and the code we want to run if the conditional statement passes is enclised in brackets. Also unlike Python, indentation of the statements under the `if` and `else` statements do not matter.
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+The `10000` determines how long it will take for a selected item to completely fade out if the function is invoked.
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
