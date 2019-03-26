@@ -77,7 +77,7 @@ The comments in JavaScript are styled in a similar way to Python comments. A com
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
 
-The JavaScript code needs to be enclosed in `<script>` html tags for the file to be able to run it. The html file can then be clicked on to get all the code inside to execute on a browser window.
+The JavaScript code needs to be enclosed in `<script>` HTML tags for the file to be able to run it. The HTML file can then be clicked on to get all the code inside to execute on a browser window.
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
 
@@ -103,7 +103,7 @@ The word `document` represents the entire HTML document that is displayed on the
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
 
-The count of all the list items (html text with `<li>` tags) is being assigned to `<span id = "items">`. This is what is responsible for the number `9` in the text `The number of list items for this page: 9`
+The count of all the list items (HTML text with `<li>` tags) is being assigned to `<span id = "items">`. This is what is responsible for the number `9` in the text `The number of list items for this page: 9`
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
 
@@ -172,7 +172,7 @@ js
 $(document).ready(function(){
     $("form").submit(function(event){
 ```
-The code above selects the entire document and invokes the function defined on line 2 when the entire document finishes loading. The function submits then invoked another function when the form (indicated by the `form` html tag) is submitted.
+The code above selects the entire document and invokes the function defined on line 2 when the entire document finishes loading. The function submits the form then invokes another function when the form (indicated by the `form` HTML tag) is submitted.
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
