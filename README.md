@@ -72,12 +72,15 @@ Some JavaScript code
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
+
 The comments in JavaScript are styled in a similar way to Python comments. A comment is done in the following way: `// comment `
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
-To run the program, the html file can be clicked on, which will render the html code in a browser.
+
+The JavaScript code needs to be enclosed in `<script>` html tags for the file to be able to run it. The html file can then be clicked on to get all the code inside to execute on a browser window.
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
+
 `console.log('hello in console');`
 `alert("hello");`
 alerts are used to show text to the viewer of a webpage as a pop-up. console.log on the other hand is for developers that only prints out text in the console.
@@ -157,7 +160,7 @@ js
 $(document).ready(function(){
     $("form").submit(function(event){
 ```
-The code above selects the entire document and invoked the function defined on line 2 when the entire document finishes loading. The function submits then invoked another function when the form (indicated by the `form` html tag) is submitted.
+The code above selects the entire document and invokes the function defined on line 2 when the entire document finishes loading. The function submits then invoked another function when the form (indicated by the `form` html tag) is submitted.
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
